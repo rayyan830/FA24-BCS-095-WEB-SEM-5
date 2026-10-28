@@ -12,3 +12,75 @@
 
 </body>
 </html>
+
+
+  <section class="product-bar">
+    <div class="container py-3">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div>
+          <p class="bar-title">Galaxy S26 Ultra</p>
+          <p class="mb-0 small"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <strong>4.6</strong> (128 reviews)</p>
+        </div>
+        <button type="button" class="btn btn-buy">BUY NOW</button>
+      </div>
+      <div class="bar-tabs d-flex gap-4 mt-3">
+        <a href="#features">Features</a>
+        <a href="#spec">Spec</a>
+        <a href="#more">More products</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container py-4 py-md-5">
+    <!-- DETAIL LAYOUT: stacked on phone, image left / info right from tablet up -->
+    <div class="row g-4 g-lg-5">
+      <div class="col-12 col-md-6">
+        <div class="detail-img">
+          <img src="images/s26-ultra.jpg" alt="Galaxy S26 Ultra">
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <span class="badge text-bg-light mb-2">Phone</span>
+        <h1 class="h2 fw-bold">Galaxy S26 Ultra</h1>
+        <p class="detail-price mb-1">$1,299</p>
+        <p class="text-success small">In stock &middot; Free shipping</p>
+
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="small me-1">Color</span>
+          <span class="swatch sw-black selected" title="Black"></span>
+          <span class="swatch sw-silver" title="Silver"></span>
+          <span class="swatch sw-blue" title="Blue"></span>
+        </div>
+
+        <p id="features" class="mt-3 scroll-target">The top of the Galaxy S range, with a large Dynamic AMOLED display, a 200MP main camera and Galaxy AI built in. Designed for people who want one device for photos, work and play.</p>
+
+        <ul id="spec" class="list-group list-group-flush mb-4 scroll-target">
+          <li class="list-group-item d-flex justify-content-between px-0"><span>Camera</span><span>200MP main</span></li>
+          <li class="list-group-item d-flex justify-content-between px-0"><span>Memory</span><span>12GB RAM</span></li>
+          <li class="list-group-item d-flex justify-content-between px-0"><span>Storage</span><span>256GB and up</span></li>
+          <li class="list-group-item d-flex justify-content-between px-0"><span>Software updates</span><span>7 years</span></li>
+        </ul>
+
+       
+        <div class="d-flex flex-wrap gap-3 align-items-end">
+          <div>
+            <label for="qty" class="form-label small mb-1">Quantity</label>
+            <input type="number" id="qty" class="form-control qty-input" value="1" min="1" max="10">
+          </div>
+          <button type="button" class="btn btn-dark btn-lg flex-grow-1">Add to Cart</button>
+        </div>
+
+        <div class="trust mt-4">
+          <div class="row row-cols-3 g-2 text-center small">
+            <div class="col"><div><strong class="d-block">Free</strong>shipping</div></div>
+            <div class="col"><div><strong class="d-block">1 year</strong>warranty</div></div>
+            <div class="col"><div><strong class="d-block">14 days</strong>returns</div></div>
+          </div>
+        </div>
+
+        <a href="index.html" class="d-inline-block mt-4">&larr; Back to all products</a>
+      </div>
+    </div>
+
+  </main>
