@@ -106,3 +106,41 @@ a { color: inherit; }
 .sw-silver { background: #d9dbe0; }
 .sw-blue { background: #3b5bdb; }
 .trust > div > div { background: var(--soft); border-radius: 12px; padding: .75rem .5rem; }
+
+
+
+.chat-widget {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 1030;
+  display: flex; flex-direction: column; align-items: flex-end; gap: .75rem;
+}
+.chat-row { display: flex; align-items: center; gap: .6rem; }
+.chat-bubble {
+  position: relative; max-width: 240px; background: #fff; color: #333;
+  border-radius: 16px; padding: .75rem 2.6rem .75rem 1rem;
+  font-size: .82rem; line-height: 1.35; box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+}
+.chat-close {
+  position: absolute; top: .6rem; right: .65rem; width: 20px; height: 20px;
+  border-radius: 50%; background: #333; color: #fff;
+  font-size: .95rem; line-height: 19px; text-align: center; cursor: pointer;
+}
+.chat-toggle:checked ~ .chat-row .chat-bubble { display: none; }
+.chat-toggle:focus-visible ~ .chat-row .chat-close { outline: 2px solid var(--buy); outline-offset: 2px; }
+.chat-avatar {
+  width: 56px; height: 56px; border-radius: 50%; overflow: hidden; display: block;
+  border: 2px solid #fff; box-shadow: 0 6px 24px rgba(0, 0, 0, .25);
+}
+.chat-avatar svg { display: block; width: 100%; height: 100%; }
+.to-top {
+  width: 48px; height: 48px; border-radius: 50%; background: #111; color: #fff;
+  display: grid; place-items: center; margin-right: 4px;
+}
+.to-top:hover { background: var(--blue); color: #fff; }
+
+
+
+.site-footer { background: #151515; color: #cfcfcf; }
+.site-footer a { color: #cfcfcf; text-decoration: none; line-height: 2; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }
+.newsletter .form-control { border-radius: 999px 0 0 999px; }
+.newsletter .btn { border-radius: 0 999px 999px 0; }
