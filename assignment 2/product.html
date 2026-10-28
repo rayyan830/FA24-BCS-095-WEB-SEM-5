@@ -10,10 +10,42 @@
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
 
-</body>
-</html>
+  <!-- HEADER (Samsung style): utility links, wordmark, nav, icons. Bootstrap navbar + flex utilities -->
+  <header class="site-header sticky-top bg-white">
+    <div class="container">
+      <div class="util d-none d-md-flex justify-content-end gap-4 pt-2">
+        <a href="#">For Business &#8599;</a>
+        <a href="#">Support</a>
+      </div>
+      <nav class="navbar navbar-expand flex-wrap px-0 py-2">
+        <a class="navbar-brand brand order-1" href="index.html">SAMSUNG</a>
+        <ul class="navbar-nav main-nav flex-row flex-nowrap order-3 order-lg-2 w-100 w-lg-auto me-lg-auto ms-lg-5 gap-4 mt-1 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#mobile">Mobile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">TV &amp; AV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Appliances</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Monitors</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#wearables">Wearables</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Samsung Week</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 order-2 order-lg-3 ms-auto ms-lg-0">
+          <a class="icon-btn" href="#" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
+          <a class="icon-btn" href="#" aria-label="Cart"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.2h8.7a1.5 1.5 0 0 0 1.5-1.1L21 8H6"/></svg></a>
+          <a class="icon-btn" href="#" aria-label="Account"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
+  <!-- PROMO BAR -->
+  <div class="promo">
+    <div class="container d-flex align-items-center justify-content-between gap-3 py-2">
+      <p class="mb-0 flex-grow-1 text-center">Samsung Week is live! Enjoy exclusive Galaxy deals, trade-in benefits and limited-time offers across Samsung products. <a href="index.html#products">Shop now &rsaquo;</a></p>
+      <span class="d-none d-sm-inline-flex" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+    </div>
+  </div>
 
+  <!-- PRODUCT BAR: title, rating, Buy Now and section tabs (like samsung.com product pages) -->
   <section class="product-bar">
     <div class="container py-3">
       <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
@@ -62,7 +94,7 @@
           <li class="list-group-item d-flex justify-content-between px-0"><span>Software updates</span><span>7 years</span></li>
         </ul>
 
-       
+        <!-- Quantity + button: flex row, wraps on very small screens -->
         <div class="d-flex flex-wrap gap-3 align-items-end">
           <div>
             <label for="qty" class="form-label small mb-1">Quantity</label>
@@ -83,8 +115,7 @@
       </div>
     </div>
 
-  </main>
-     
+    <!-- RELATED PRODUCTS: 2 columns on phone, 4 on tablet and up -->
     <section id="more" class="mt-5 pt-4 border-top scroll-target">
       <h2 class="section-title h4 fw-bold mb-4">You may also like</h2>
       <div class="row row-cols-2 row-cols-md-4 g-3">
@@ -114,3 +145,77 @@
         </div>
       </div>
     </section>
+  </main>
+
+  <!-- CHAT WIDGET + SCROLL TO TOP (pure CSS: the x button hides the bubble with a checkbox) -->
+  <div class="chat-widget">
+    <input type="checkbox" id="chat-hide" class="chat-toggle visually-hidden" aria-label="Hide chat message">
+    <div class="chat-row">
+      <div class="chat-bubble d-none d-sm-block">
+        Introducing the New Galaxy S26 Ultra
+        <label for="chat-hide" class="chat-close" aria-hidden="true">&times;</label>
+      </div>
+      <a href="#" class="chat-avatar" aria-label="Chat with a Samsung advisor">
+        <svg viewBox="0 0 56 56" width="56" height="56" aria-hidden="true"><rect width="56" height="56" fill="#efe3da"/><path d="M6 56c2-12 10-17 22-17s20 5 22 17z" fill="#1b1b1f"/><ellipse cx="28" cy="25" rx="10" ry="12" fill="#c98f6b"/><path d="M17 26c-2-13 6-20 13-19 8 1 12 8 9 19-1-7-4-10-9-11-5 0-10 3-13 11z" fill="#1b1410"/></svg>
+      </a>
+    </div>
+    <a href="#top" class="to-top" aria-label="Back to top">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>
+    </a>
+  </div>
+
+  <!-- FOOTER: identical on both pages. 2 columns on phone, 4 on desktop -->
+  <footer id="footer" class="site-footer mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="newsletter row align-items-center g-3 pb-4 mb-4 border-bottom border-secondary">
+        <div class="col-12 col-md-6">
+          <h2 class="h5 text-white mb-1">Get Galaxy offers first</h2>
+          <p class="small mb-0">New launches and deals in your inbox.</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Email address" aria-label="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col">
+          <h2 class="h6 fw-bold">Shop</h2>
+          <ul class="list-unstyled small">
+            <li><a href="index.html#mobile">Galaxy phones</a></li>
+            <li><a href="index.html#wearables">Galaxy watches</a></li>
+            <li><a href="index.html">Offers</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="h6 fw-bold">Support</h2>
+          <ul class="list-unstyled small">
+            <li><a href="#">Order status</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="h6 fw-bold">About</h2>
+          <ul class="list-unstyled small">
+            <li><a href="#">Our company</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h2 class="h6 fw-bold">Follow</h2>
+          <ul class="list-unstyled small">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">X</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary mt-4">
+      <p class="small mb-0 text-center text-md-start">&copy; 2026 Samsung Shop &mdash; a student project for Assignment 2. Not affiliated with Samsung. Prices are sample values.</p>
+    </div>
+  </footer>
+</body>
+</html>
