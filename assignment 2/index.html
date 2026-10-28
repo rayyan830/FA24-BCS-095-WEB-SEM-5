@@ -10,9 +10,7 @@
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
 
-</body>
-</html>
- 
+  <!-- HEADER (Samsung style): utility links, wordmark, nav, icons. Bootstrap navbar + flex utilities -->
   <header class="site-header sticky-top bg-white">
     <div class="container">
       <div class="util d-none d-md-flex justify-content-end gap-4 pt-2">
@@ -23,9 +21,12 @@
         <a class="navbar-brand brand order-1" href="index.html">SAMSUNG</a>
         <ul class="navbar-nav main-nav flex-row flex-nowrap order-3 order-lg-2 w-100 w-lg-auto me-lg-auto ms-lg-5 gap-4 mt-1 mt-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#mobile">Phones</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#wearables">Watches</a></li>
-          <li class="nav-item"><a class="nav-link" href="#footer">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#mobile">Mobile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">TV &amp; AV</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Appliances</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Monitors</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#wearables">Wearables</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Samsung Week</a></li>
         </ul>
         <div class="d-flex align-items-center gap-3 order-2 order-lg-3 ms-auto ms-lg-0">
           <a class="icon-btn" href="#" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
@@ -35,27 +36,26 @@
       </nav>
     </div>
   </header>
-  
-  
+
+  <!-- PROMO BAR -->
   <div class="promo">
     <div class="container d-flex align-items-center justify-content-between gap-3 py-2">
       <p class="mb-0 flex-grow-1 text-center">Samsung Week is live! Enjoy exclusive Galaxy deals, trade-in benefits and limited-time offers across Samsung products. <a href="index.html#products">Shop now &rsaquo;</a></p>
       <span class="d-none d-sm-inline-flex" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
     </div>
   </div>
-  
+
   <main>
-   
+    <!-- HERO: full-width Galaxy Watch Ultra banner (never cropped), text bottom-right like samsung.com -->
     <section class="hero">
-      <img src="images/watch-ultra.jpg" alt="Galaxy Watch Ultra" class="hero-img">
+      <img src="images/watch-ultra.jpg" alt="Galaxy Watch Ultra underwater" class="hero-img">
       <div class="hero-copy">
         <h1>Galaxy Watch Ultra</h1>
         <p>Galaxy AI <svg class="sparkle" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="#4da3ff"/></svg> is here</p>
       </div>
     </section>
 
-  </main>
-     
+    <!-- FEATURES STRIP: 2 columns on phone, 4 on tablet and up -->
     <section class="feature-strip">
       <div class="container py-3">
         <div class="row row-cols-2 row-cols-md-4 g-3">
@@ -66,7 +66,8 @@
         </div>
       </div>
     </section>
-       
+
+    <!-- PRODUCT GRID: 1 column on phone, 2 on tablet, 5 on desktop -->
     <section id="products" class="container py-5">
       <h2 class="section-title h3 fw-bold mb-4">All products</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4">
@@ -134,11 +135,7 @@
           </article>
         </div>
 
-       
-
-      </div>
-    </section>
-            <div id="wearables" class="col scroll-target">
+        <div id="wearables" class="col scroll-target">
           <article class="card product-card h-100">
             <span class="tag-new">New</span>
             <a href="product.html" class="product-img"><img src="images/watch8.jpg" alt="Galaxy Watch8" loading="lazy"></a>
@@ -198,8 +195,12 @@
             </div>
           </article>
         </div>
-        
- 
+
+      </div>
+    </section>
+  </main>
+
+  <!-- CHAT WIDGET + SCROLL TO TOP (pure CSS: the x button hides the bubble with a checkbox) -->
   <div class="chat-widget">
     <input type="checkbox" id="chat-hide" class="chat-toggle visually-hidden" aria-label="Hide chat message">
     <div class="chat-row">
@@ -215,8 +216,8 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>
     </a>
   </div>
-  
- 
+
+  <!-- FOOTER: identical on both pages. 2 columns on phone, 4 on desktop -->
   <footer id="footer" class="site-footer mt-auto pt-5 pb-3">
     <div class="container">
       <div class="newsletter row align-items-center g-3 pb-4 mb-4 border-bottom border-secondary">
@@ -269,3 +270,5 @@
       <p class="small mb-0 text-center text-md-start">&copy; 2026 Samsung Shop &mdash; a student project for Assignment 2. Not affiliated with Samsung. Prices are sample values.</p>
     </div>
   </footer>
+</body>
+</html>
