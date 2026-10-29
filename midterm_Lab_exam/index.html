@@ -10,38 +10,153 @@
 </head>
 <body id="top" class="d-flex flex-column min-vh-100">
 
- 
   <header class="site-header sticky-top bg-white">
     <div class="container">
-      //for business and support links
+      <!-- for business and support links -->
       <div class="util d-none d-md-flex justify-content-end gap-4 pt-2">
         <a href="#">For Business &#8599;</a>
         <a href="#">Support</a>
       </div>
-      //main navigation bar
+      <!-- main navigation bar -->
       <nav class="navbar navbar-expand flex-wrap px-0 py-2">
+        <!-- Task 1: hidden checkbox = CSS-only hamburger button (below BP) -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle visually-hidden" aria-label="Open menu">
         <a class="navbar-brand brand order-1" href="index.html">SAMSUNG</a>
         <ul class="navbar-nav main-nav flex-row flex-nowrap order-3 order-lg-2 w-100 w-lg-auto me-lg-auto ms-lg-5 gap-4 mt-1 mt-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
+          <li class="nav-item mega-item">
+            <a class="nav-link mega-trigger" href="#shop-by-category" aria-haspopup="true">Shop by Category</a>
+            <!-- Task 1, from BP up: full-width panel with K = 5 columns (opens on hover or :focus-within) -->
+            <div class="mega-panel">
+              <div class="container">
+                <div class="mega-grid">
+                  <div class="mega-col">
+                    <h3 class="mega-heading">Mobile</h3>
+                    <ul class="mega-list">
+                      <li><a href="index.html#mobile">Galaxy S26 Series</a></li>
+                      <li><a href="index.html#mobile">Galaxy Z Fold &amp; Flip</a></li>
+                      <li><a href="index.html#mobile">Galaxy A Series</a></li>
+                      <li><a href="#">Chargers &amp; Cables</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-col">
+                    <h3 class="mega-heading">Wearables</h3>
+                    <ul class="mega-list">
+                      <li><a href="index.html#wearables">Galaxy Watch8</a></li>
+                      <li><a href="index.html#wearables">Galaxy Watch Ultra</a></li>
+                      <li><a href="index.html#wearables">Galaxy Watch FE</a></li>
+                      <li><a href="#">Watch Bands</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-col">
+                    <h3 class="mega-heading">TV &amp; AV</h3>
+                    <ul class="mega-list">
+                      <li><a href="#">Neo QLED TVs</a></li>
+                      <li><a href="#">The Frame</a></li>
+                      <li><a href="#">Soundbars</a></li>
+                      <li><a href="#">Projectors</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-col">
+                    <h3 class="mega-heading">Appliances</h3>
+                    <ul class="mega-list">
+                      <li><a href="#">Refrigerators</a></li>
+                      <li><a href="#">Washing Machines</a></li>
+                      <li><a href="#">Air Conditioners</a></li>
+                      <li><a href="#">Microwave Ovens</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-col">
+                    <h3 class="mega-heading">Monitors</h3>
+                    <ul class="mega-list">
+                      <li><a href="#">Odyssey Gaming</a></li>
+                      <li><a href="#">ViewFinity Pro</a></li>
+                      <li><a href="#">Smart Monitors</a></li>
+                      <li><a href="#">Monitor Accessories</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Task 1, below BP: the same 5 groups as an accordion (details/summary) inside the hamburger menu -->
+            <div class="mega-accordion" id="shop-by-category">
+              <details>
+                <summary>Mobile</summary>
+                <ul>
+                  <li><a href="index.html#mobile">Galaxy S26 Series</a></li>
+                  <li><a href="index.html#mobile">Galaxy Z Fold &amp; Flip</a></li>
+                  <li><a href="index.html#mobile">Galaxy A Series</a></li>
+                  <li><a href="#">Chargers &amp; Cables</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary>Wearables</summary>
+                <ul>
+                  <li><a href="index.html#wearables">Galaxy Watch8</a></li>
+                  <li><a href="index.html#wearables">Galaxy Watch Ultra</a></li>
+                  <li><a href="index.html#wearables">Galaxy Watch FE</a></li>
+                  <li><a href="#">Watch Bands</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary>TV &amp; AV</summary>
+                <ul>
+                  <li><a href="#">Neo QLED TVs</a></li>
+                  <li><a href="#">The Frame</a></li>
+                  <li><a href="#">Soundbars</a></li>
+                  <li><a href="#">Projectors</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary>Appliances</summary>
+                <ul>
+                  <li><a href="#">Refrigerators</a></li>
+                  <li><a href="#">Washing Machines</a></li>
+                  <li><a href="#">Air Conditioners</a></li>
+                  <li><a href="#">Microwave Ovens</a></li>
+                </ul>
+              </details>
+              <details>
+                <summary>Monitors</summary>
+                <ul>
+                  <li><a href="#">Odyssey Gaming</a></li>
+                  <li><a href="#">ViewFinity Pro</a></li>
+                  <li><a href="#">Smart Monitors</a></li>
+                  <li><a href="#">Monitor Accessories</a></li>
+                </ul>
+              </details>
+            </div>
+          </li>
           <li class="nav-item"><a class="nav-link" href="index.html#mobile">Mobile</a></li>
           <li class="nav-item"><a class="nav-link" href="#">TV &amp; AV</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Appliances</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Monitors</a></li>
-          
           <li class="nav-item"><a class="nav-link" href="index.html#wearables">Wearables</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Samsung Week</a></li>
         </ul>
-        //search, cart, and account icons by svg
+        <!-- search, cart, and account icons by svg -->
         <div class="d-flex align-items-center gap-3 order-2 order-lg-3 ms-auto ms-lg-0">
           <a class="icon-btn" href="#" aria-label="Search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></a>
-          <a class="icon-btn" href="#" aria-label="Cart"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.2h8.7a1.5 1.5 0 0 0 1.5-1.1L21 8H6"/></svg></a>
+          <div class="cart-wrap">
+            <a class="icon-btn cart-btn" id="cart-btn" href="checkout.html" aria-label="Cart" aria-controls="mini-cart"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.7 12.4a1.5 1.5 0 0 0 1.5 1.2h8.7a1.5 1.5 0 0 0 1.5-1.1L21 8H6"/></svg><span class="cart-badge" id="cart-count">0</span></a>
+            <!-- Task 3: mini-cart panel (opened and filled by script.js) -->
+            <div class="mini-cart" id="mini-cart" hidden>
+              <h2 class="h6 fw-bold mb-2">Your cart</h2>
+              <p class="small text-muted mb-0" id="cart-empty">Your cart is empty.</p>
+              <ul class="list-unstyled mb-0 mini-list" id="cart-list"></ul>
+              <div class="d-flex justify-content-between fw-bold border-top pt-2 mt-2"><span>Total</span><span id="cart-total">$0</span></div>
+              <a href="checkout.html" class="btn btn-dark btn-sm w-100 mt-3">Go to checkout</a>
+            </div>
+          </div>
           <a class="icon-btn" href="#" aria-label="Account"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
         </div>
+        <label for="nav-toggle" class="nav-burger order-2" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </label>
       </nav>
     </div>
   </header>
 
- 
   <div class="promo">
     <div class="container d-flex align-items-center justify-content-between gap-3 py-2">
       <p class="mb-0 flex-grow-1 text-center">Samsung Week is live! Enjoy exclusive Galaxy deals, trade-in benefits and limited-time offers across Samsung products. <a href="index.html#products">Shop now &rsaquo;</a></p>
@@ -50,7 +165,7 @@
   </div>
 
   <main>
-   //main hero and main pic 
+    <!-- main hero and main pic -->
     <section class="hero">
       <img src="images/watch-ultra.jpg" alt="Galaxy Watch Ultra underwater" class="hero-img">
       <div class="hero-copy">
@@ -59,7 +174,7 @@
       </div>
     </section>
 
-   //free shiping easy return icon
+    <!-- free shiping easy return icon -->
     <section class="feature-strip">
       <div class="container py-3">
         <div class="row row-cols-2 row-cols-md-4 g-3">
@@ -70,8 +185,8 @@
         </div>
       </div>
     </section>
-//product grid
- 
+
+    <!-- product grid -->
     <section id="products" class="container py-5">
       <h2 class="section-title h3 fw-bold mb-4">All products</h2>
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4">
@@ -187,7 +302,7 @@
             </div>
           </article>
         </div>
-//grid closes
+
         <div class="col">
           <article class="card product-card h-100">
             <a href="product.html" class="product-img"><img src="images/watch7.jpg" alt="Galaxy Watch7" loading="lazy"></a>
@@ -199,12 +314,12 @@
             </div>
           </article>
         </div>
-
+      <!-- grid closes -->
       </div>
     </section>
   </main>
-// chat widget
 
+  <!-- chat widget -->
   <div class="chat-widget">
     <input type="checkbox" id="chat-hide" class="chat-toggle visually-hidden" aria-label="Hide chat message">
     <div class="chat-row">
@@ -212,7 +327,7 @@
         Introducing the New Galaxy S26 Ultra
         <label for="chat-hide" class="chat-close" aria-hidden="true">&times;</label>
       </div>
-      //arrow icon for chat widget
+      <!-- arrow icon for chat widget -->
       <a href="#" class="chat-avatar" aria-label="Chat with a Samsung advisor">
         <svg viewBox="0 0 56 56" width="56" height="56" aria-hidden="true"><rect width="56" height="56" fill="#efe3da"/><path d="M6 56c2-12 10-17 22-17s20 5 22 17z" fill="#1b1b1f"/><ellipse cx="28" cy="25" rx="10" ry="12" fill="#c98f6b"/><path d="M17 26c-2-13 6-20 13-19 8 1 12 8 9 19-1-7-4-10-9-11-5 0-10 3-13 11z" fill="#1b1410"/></svg>
       </a>
@@ -221,8 +336,8 @@
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5M5 12l7-7 7 7"/></svg>
     </a>
   </div>
-//get galaxy offer ,email
- 
+
+  <!-- get galaxy offer ,email -->
   <footer id="footer" class="site-footer mt-auto pt-5 pb-3">
     <div class="container">
       <div class="newsletter row align-items-center g-3 pb-4 mb-4 border-bottom border-secondary">
@@ -233,7 +348,7 @@
         <div class="col-12 col-md-6">
           <div class="input-group">
             <input type="email" class="form-control" placeholder="Email address" aria-label="Email address">
-           //shop column
+            <!-- shop column -->
             <button class="btn btn-primary" type="button">Subscribe</button>
           </div>
         </div>
@@ -276,5 +391,6 @@
       <p class="small mb-0 text-center text-md-start">&copy; 2026 Samsung Shop &mdash; a student project for Assignment 2. Not affiliated with Samsung. Prices are sample values.</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
