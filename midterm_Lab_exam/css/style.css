@@ -1,4 +1,5 @@
 
+/* Custom styles on top of Bootstrap 5.3 */
 :root {
   --blue: #1428a0;
   --buy: #0a6cf0;
@@ -10,8 +11,8 @@ html { scroll-behavior: smooth; }
 body { font-family: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif; color: #111; }
 a { color: inherit; }
 .scroll-target { scroll-margin-top: 180px; }
-
-
+ 
+/* Header (Samsung style) */
 .site-header { border-bottom: 1px solid var(--line); }
 .util a { color: #111; text-decoration: none; font-size: .85rem; font-weight: 500; }
 .util a:hover { text-decoration: underline; }
@@ -26,13 +27,13 @@ a { color: inherit; }
 .main-nav .nav-link:hover::after { width: 100%; }
 .icon-btn { display: inline-flex; padding: .25rem; color: #000; }
 .icon-btn:hover { color: var(--blue); }
-
+ 
 /* Promo bar */
 .promo { background: var(--soft); font-size: .9rem; }
 .promo a { color: #000; font-weight: 500; text-decoration: none; white-space: nowrap; }
 .promo a:hover { text-decoration: underline; }
-
-
+ 
+/* Hero: the full banner is shown (height: auto, never cropped); text sits bottom-right on top of it */
 .hero { display: grid; background: var(--teal); color: #fff; }
 .hero-img { grid-area: 1 / 1; display: block; width: 100%; height: auto; }
 .hero-copy {
@@ -43,8 +44,8 @@ a { color: inherit; }
 .hero-copy h1 { font-size: clamp(1.6rem, 4.6vw, 4.2rem); font-weight: 700; line-height: 1.05; margin: 0; letter-spacing: -.01em; }
 .hero-copy p { font-size: clamp(1.1rem, 3.4vw, 3.1rem); font-weight: 300; line-height: 1.15; margin: .25rem 0 0; }
 .sparkle { width: .8em; height: .8em; vertical-align: -.05em; }
-
-
+ 
+/* Buttons */
 .btn-primary {
   --bs-btn-bg: var(--blue); --bs-btn-border-color: var(--blue);
   --bs-btn-hover-bg: #0e1d78; --bs-btn-hover-border-color: #0e1d78;
@@ -52,20 +53,20 @@ a { color: inherit; }
 }
 .btn-buy { background: var(--buy); color: #fff; border: 0; border-radius: 999px; font-weight: 700; padding: .6rem 1.7rem; }
 .btn-buy:hover { background: #0857c3; color: #fff; }
-
-
+ 
+/* Features strip */
 .feature-strip { background: #fff; border-bottom: 1px solid var(--line); }
 .feature { border-left: 3px solid var(--blue); padding-left: .9rem; }
 .feature strong { display: block; font-size: .95rem; }
 .feature span { font-size: .82rem; color: #6b7280; }
-
-
+ 
+/* Section heading */
 .section-title::after {
   content: ""; display: block; width: 48px; height: 3px; margin-top: .5rem;
   background: var(--blue); border-radius: 2px;
 }
-
-
+ 
+/* Product cards: no outline, no padding, no cropping */
 .product-card {
   border: 0; border-radius: 16px; overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
@@ -86,8 +87,8 @@ a { color: inherit; }
   background: var(--blue); color: #fff; font-size: .7rem; font-weight: 600;
   padding: .2rem .65rem; border-radius: 999px;
 }
-
-
+ 
+/* Product bar + detail */
 .product-bar { background: #fff; border-bottom: 1px solid var(--line); }
 .bar-title { font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.2; }
 .stars { color: #f5a623; letter-spacing: .05em; }
@@ -106,8 +107,8 @@ a { color: inherit; }
 .sw-silver { background: #d9dbe0; }
 .sw-blue { background: #3b5bdb; }
 .trust > div > div { background: var(--soft); border-radius: 12px; padding: .75rem .5rem; }
-
-
+ 
+/* Chat widget + scroll to top (pure CSS, no JavaScript) */
 .chat-widget {
   position: fixed; right: 1rem; bottom: 1rem; z-index: 1030;
   display: flex; flex-direction: column; align-items: flex-end; gap: .75rem;
@@ -135,19 +136,19 @@ a { color: inherit; }
   display: grid; place-items: center; margin-right: 4px;
 }
 .to-top:hover { background: var(--blue); color: #fff; }
-
-
+ 
+/* Footer */
 .site-footer { background: #151515; color: #cfcfcf; }
 .site-footer a { color: #cfcfcf; text-decoration: none; line-height: 2; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 .newsletter .form-control { border-radius: 999px 0 0 999px; }
 .newsletter .btn { border-radius: 0 999px 999px 0; }
-
-
+ 
+/* Media queries (w-lg-auto isn't a Bootstrap class, so it is defined here) */
 @media (min-width: 992px) {
   .w-lg-auto { width: auto !important; }
 }
-
+/* Phone: banner on top, text underneath on the dark teal background */
 @media (max-width: 767.98px) {
   .hero { display: block; }
   .hero-copy { padding: 1rem; text-shadow: none; }
@@ -160,3 +161,113 @@ a { color: inherit; }
   html { scroll-behavior: auto; }
   .product-card, .product-img img, .main-nav .nav-link::after { transition: none; }
 }
+ 
+/* =====================================================
+   MIDTERM  (roll FA24-BCS-095  ->  N = 95)
+   BP = 600 + 95 = 695px   H = (95 x 7) mod 360 = 305   K = (95 mod 3) + 3 = 5
+   ===================================================== */
+:root {
+  --accent: hsl(305, 70%, 45%);
+  --k: 5;
+}
+ 
+/* ---------- TASK 1: mega-menu (from BP up) and hamburger accordion (below BP) ---------- */
+.site-header { z-index: 1040; }              /* above the chat widget (1030), cards and everything else */
+.site-header .navbar { position: static; }   /* so the panel is placed against the full-width header */
+.mega-item { position: static; }
+ 
+.nav-burger { display: none; cursor: pointer; padding: .25rem; color: #000; }
+.nav-toggle:focus-visible ~ .nav-burger { outline: 2px solid var(--accent); outline-offset: 2px; }
+.mega-panel, .mega-accordion { display: none; }
+ 
+.mega-heading {
+  font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin: 0 0 .75rem; padding-bottom: .5rem; border-bottom: 2px solid var(--accent);
+}
+.mega-list { list-style: none; margin: 0; padding: 0; }
+.mega-list a { display: block; padding: .3rem 0; color: #222; text-decoration: none; font-size: .92rem; }
+.mega-list a:hover, .mega-list a:focus-visible { color: var(--accent); text-decoration: underline; }
+ 
+/* below BP: links hide behind the hamburger, groups become an accordion */
+@media (max-width: 694.98px) {
+  .nav-burger { display: inline-flex; }
+  .site-header .main-nav {
+    display: none; overflow: visible; border-top: 1px solid var(--line);
+    flex-direction: column !important; gap: 0 !important;
+  }
+  .site-header .nav-toggle:checked ~ .main-nav { display: flex; }
+  .site-header .main-nav .nav-link { padding: .75rem 0; border-bottom: 1px solid var(--line); }
+  .mega-accordion { display: block; padding-left: .75rem; }
+  .mega-accordion details { border-bottom: 1px solid var(--line); }
+  .mega-accordion summary {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: .65rem 0; font-weight: 600; cursor: pointer; list-style: none;
+  }
+  .mega-accordion summary::-webkit-details-marker { display: none; }
+  .mega-accordion summary::after { content: "+"; color: var(--accent); font-size: 1.2rem; }
+  .mega-accordion details[open] summary::after { content: "\2212"; }
+  .mega-accordion ul { list-style: none; margin: 0; padding: 0 0 .5rem .75rem; }
+  .mega-accordion li a { display: block; padding: .35rem 0; color: #333; text-decoration: none; }
+}
+ 
+/* from BP up: full-width panel under the navbar, K columns */
+@media (min-width: 695px) {
+  .nav-toggle { display: none; }
+  .mega-panel {
+    display: block; position: absolute; left: 0; right: 0; top: 100%;
+    background: #fff; border-top: 1px solid var(--line); box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+    visibility: hidden; opacity: 0; pointer-events: none;
+    transition: opacity .15s ease, visibility .15s ease;
+  }
+  /* invisible bridge so the panel stays open while the pointer travels from the menu item into it */
+  .mega-panel::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 14px; }
+  .mega-item:hover > .mega-panel,
+  .mega-item:focus-within > .mega-panel { visibility: visible; opacity: 1; pointer-events: auto; }
+  .mega-grid {
+    display: grid; grid-template-columns: repeat(var(--k), minmax(0, 1fr));
+    gap: 2rem; padding: 1.75rem 0 2rem;
+  }
+}
+ 
+/* ---------- TASK 2: checkout form ---------- */
+.checkout-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.checkout fieldset { border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem; }
+.checkout legend { font-size: 1.1rem; font-weight: 700; padding: 0; margin-bottom: 1rem; }
+.field { display: grid; grid-template-columns: 1fr; gap: .35rem; margin-bottom: 1rem; }
+.field label { font-weight: 600; font-size: .9rem; }
+.field .error { display: none; color: #c1121f; font-size: .82rem; }
+.field :is(input, select):user-invalid { border-color: #c1121f; box-shadow: 0 0 0 .15rem rgba(193, 18, 31, .15); }
+.field :is(input, select):user-invalid ~ .error { display: block; }
+@supports not selector(:user-invalid) {
+  .field input:not(:placeholder-shown):invalid { border-color: #c1121f; }
+  .field input:not(:placeholder-shown):invalid ~ .error { display: block; }
+}
+@media (min-width: 695px) {
+  .checkout-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+  .field { grid-template-columns: 7.5rem 1fr; column-gap: 1rem; align-items: center; }
+  .field .error { grid-column: 2; }
+}
+ 
+/* ---------- TASK 3: cart badge and mini cart ---------- */
+.cart-btn { position: relative; }
+.cart-badge {
+  position: absolute; top: -4px; right: -8px; min-width: 18px; height: 18px; padding: 0 4px;
+  display: grid; place-items: center; border-radius: 999px;
+  background: var(--accent); color: #fff; font-size: .7rem; font-weight: 700; line-height: 1;
+}
+.mini-cart {
+  position: absolute; top: 100%; right: .75rem; z-index: 5;
+  width: min(360px, calc(100vw - 1.5rem)); padding: 1rem;
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 14px 36px rgba(0, 0, 0, .2);
+}
+.mini-list { max-height: 45vh; overflow-y: auto; }
+.mini-item {
+  display: grid; grid-template-columns: 1fr auto auto; gap: .5rem; align-items: center;
+  padding: .45rem 0; border-bottom: 1px solid var(--line); font-size: .9rem;
+}
+.mini-name { font-weight: 600; }
+@media (min-width: 695px) {
+  .cart-wrap { position: relative; }
+  .mini-cart { top: calc(100% + .75rem); right: 0; width: 360px; }
+}
+ 
